@@ -1,0 +1,2 @@
+# Image-Based-Process-Monitoring-Robust-Tensorial-Data-Approaches.
+This repository contains the code, data-processing scripts, and simulation results associated with the thesis “Image-Based Process Monitoring: Robust Tensorial Data Approaches.” It includes the implementation of the proposed tensor-based monitoring schemes, the simulation study, and the real-data applications used to evaluate their performance.
