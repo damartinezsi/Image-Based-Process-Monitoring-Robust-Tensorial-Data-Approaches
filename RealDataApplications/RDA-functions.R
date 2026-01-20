@@ -688,10 +688,7 @@ proj_qr <- function(U) {
 # ============================================================================ #
 
 load_tensor_images <- function(dir_path, id_range = 0:208, h = 100, w = 100) {
-  # Usa nombre corto si Windows
   dir_path <- tryCatch(utils::shortPathName(dir_path), error = function(e) dir_path)
-  
-  # Intenta con 000.png...208.png, si no existen, usa list.files
   candidate_files <- file.path(dir_path, sprintf("%03d.png", id_range))
   existing_files <- candidate_files[file.exists(candidate_files)]
   
@@ -1506,5 +1503,6 @@ replace_at_indices_with_broken <- function(X_base, X_broken, idx_replace) {
   X_mod[idx_replace,,,] <- X_broken[idx_broken,,,]
   return(X_mod)
 }
+
 
 
