@@ -14,7 +14,7 @@ All simulation studies and real-data analyses presented in the thesis can be ful
 
 ## Requirements
 
-The code is written in **R** (version 4.5.2) and relies on standard numerical and tensor analysis tools. 
+The code is written in **R** (version 4.5.2). Some simulation studies included in this repository are computationally intensive, particularly those involving large image tensors, robust estimation procedures, and extensive Monte Carlo replications. As a result, full replication of certain experiments may require considerable execution time, depending on the available hardware and computational resources.
 
 ## Contact
 
