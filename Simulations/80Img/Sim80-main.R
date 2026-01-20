@@ -55,18 +55,18 @@ results <- parLapply(cl, 1:N_iter, run_simulation)
 results_df <- do.call(rbind, results)
 stopCluster(cl)
 
-# Valores de alpha para n=60 Imágenes ---------------------------------------
+# Valores de alpha para n=80 Imágenes ---------------------------------------
 
-alpha_TROD <-0.053        
-alpha_TROD_MCD <-0.052  
+alpha_TROD <-0.056        
+alpha_TROD_MCD <-0.054  
 
-alpha_MPCA <-0.05       
-alpha_MPCA_MCD <-0.05    
+alpha_MPCA <-0.054      
+alpha_MPCA_MCD <-0.052    
 alpha_MPCA_MCD_80 <-0.050   
 
-alpha_MACRO <-0.052     
+alpha_MACRO <-0.05     
 alpha_MACRO_MCD <-0.05    
-alpha_MACRO_MCD_80 <-0.05
+alpha_MACRO_MCD_80 <-0.050
 
 
 # UCLs basados en percentiles empíricos --------------------------------------
@@ -208,7 +208,7 @@ for (delta_sim in delta_values) {
       run_simulation(
         i,
         delta = 0,
-        n_samples = 60,
+        n_samples = 80,
         prop_in_control = 0.95,
         region_enable = FALSE,
         d1delta=dval
@@ -269,5 +269,6 @@ for (delta_sim in delta_values) {
 # Calculamos tasa de detección por método y delta
 tasa_senal <- aggregate(. ~ delta, data = results_signal, mean)
 print(tasa_senal)
+
 
 
