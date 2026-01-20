@@ -18,7 +18,7 @@ The code is written in **R** (version 4.5.2). Some simulation studies included i
 
 ## Contact
 
-For questions, suggestions, or collaboration opportunities, feel free to contact the author through GitHub or via academic email.
+For questions, suggestions, or collaboration opportunities, feel free to reach out at damartinezsi@unal.edu.co
 
 
 ---
