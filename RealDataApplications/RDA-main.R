@@ -184,7 +184,7 @@ Resultados_bootstrap_df$SIGNAL_MACRO_MCD_80 <- as.integer((Resultados_bootstrap_
 
 
 # ==========================================================
-# === Tasas de señal promedio (esperadas cercanas a 0)
+#  Tasas de señal promedio
 # ==========================================================
 
 mean_vals <- c(
@@ -477,14 +477,14 @@ pal <- c("Original" = "#1f77b4", "Contaminated" = "#d62728")
 
 # === Carta T² (TROD-MCD_F) ===
 plot_T2_TRODMCDF_C2 <- ggplot(df, aes(x = Image, y = T2_TROD_MCD_80)) +
-  geom_line(color = "#89CFF0", linewidth = 0.8, alpha = 0.9) +          # línea azul clara fija
+  geom_line(color = "#89CFF0", linewidth = 0.8, alpha = 0.9) +          
   geom_point(aes(fill = tipo),
-             shape = 21, size = 3, color = "black", stroke = 0.35) +    # puntos con borde
+             shape = 21, size = 3, color = "black", stroke = 0.35) +   
   geom_hline(yintercept = UCL_T_TROD_MCD_80, color = "black",
              linetype = "dashed", linewidth = 0.8) +
   annotate("text",
-           x = 30,                     # al final del eje x
-           y = UCL_T_TROD_MCD_80 * 2,                 # un poco por encima del UCL
+           x = 30,                    
+           y = UCL_T_TROD_MCD_80 * 2,                 
            label = paste0("UCL = ", round(UCL_T_TROD_MCD_80, 2)),
            hjust = 1, vjust = 0, size = 4) +
   scale_fill_manual(values = pal, name = "Image version") +
@@ -644,6 +644,7 @@ ggsave(
   height = 5,
   dpi = 450
 )
+
 
 
 
