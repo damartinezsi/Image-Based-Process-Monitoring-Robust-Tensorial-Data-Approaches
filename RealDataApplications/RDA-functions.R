@@ -1153,7 +1153,7 @@ Real_images    <- function(i, X_IMAGES, n_samples = 209) {
   Time_MACRO_Q <- Final_MACRO_Q - Inicio_MACRO_Q
   
   #cat("Fin de la iteración:", i, "- delta:", delta_sim,"\n")
-  cat("Fin de la iteración:", i,"\n")
+  #cat("Fin de la iteración:", i,"\n")
   return(data.frame(
     iter = i,
     # Tiempos de las descomposiciones
@@ -1495,7 +1495,6 @@ Real_test <- function(X_IMAGES=X_defectuosas) {
 #                           Reemplazar cada k img                              #
 # ============================================================================ #
 
-
 replace_at_indices_with_broken <- function(X_base, X_broken, idx_replace) {
   X_mod <- X_base
   total <- dim(X_base)[1]
@@ -1507,4 +1506,5 @@ replace_at_indices_with_broken <- function(X_base, X_broken, idx_replace) {
   X_mod[idx_replace,,,] <- X_broken[idx_broken,,,]
   return(X_mod)
 }
+
 
